@@ -305,7 +305,7 @@ int value specifying the highest output log level:
   LvlTrace = 5
 ```
 
-To set an output dir for logs to be collected on disk, please set `--log.dir.path` If you want to change the filename prodiced from `erigon` you should also set the `--log.dir.prefix` flag to an alternate name. The flag `--log.dir.verbosity` is
+To set an output dir for logs to be collected on disk, please set `--log.dir.path` If you want to change the filename produced from `erigon` you should also set the `--log.dir.prefix` flag to an alternate name. The flag `--log.dir.verbosity` is
 also available to control the verbosity of this logging, with the same int value as above, or the string value e.g. '
 debug' or 'info'. Default verbosity is 'debug' (4), for disk logging.
 
@@ -314,8 +314,8 @@ output `--log.dir.json`.
 
 ### Modularity
 
-Erigon by default is "all in one binary" solution, but it's possible start TxPool as separated processes.
-Same true about: JSON RPC layer (RPCDaemon), p2p layer (Sentry), history download layer (Downloader), consensus.
+Erigon by default is "all in one binary" solution, but it's possible to start TxPool as separated processes.
+Same is true about: JSON RPC layer (RPCDaemon), p2p layer (Sentry), history download layer (Downloader), consensus.
 Don't start services as separated processes unless you have clear reason for it: resource limiting, scale, replace by
 your own implementation, security.
 How to start Erigon's services as separated processes, see in [docker-compose.yml](./docker-compose.yml).
@@ -371,7 +371,7 @@ Windows users may run erigon in 3 possible ways:
 * Build executable binaries natively for Windows using provided `wmake.ps1` PowerShell script. Usage syntax is the same
   as `make` command so you have to run `.\wmake.ps1 [-target] <targetname>`. Example: `.\wmake.ps1 erigon` builds erigon
   executable. All binaries are placed in `.\build\bin\` subfolder. There are some requirements for a successful native
-  build on windows :
+  build on windows:
     * [Git](https://git-scm.com/downloads) for Windows must be installed. If you're cloning this repository is very
       likely you already have it
     * [GO Programming Language](https://golang.org/dl/) must be installed. Minimum required version is 1.19
@@ -379,7 +379,7 @@ Windows users may run erigon in 3 possible ways:
       following point)
     * If you need to build MDBX tools (i.e. `.\wmake.ps1 db-tools`)
       then [Chocolatey package manager](https://chocolatey.org/) for Windows must be installed. By Chocolatey you need
-      to install the following components : `cmake`, `make`, `mingw` by `choco install cmake make mingw`. Make sure
+      to install the following components: `cmake`, `make`, `mingw` by `choco install cmake make mingw`. Make sure
       Windows System "Path" variable has:
       C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin
 
@@ -392,7 +392,7 @@ Windows users may run erigon in 3 possible ways:
   for `build\bin\mdbx\CMakeFiles` sub-folder of the cloned repo or you can run erigon using the following other two
   options
 
-* Use Docker :  see [docker-compose.yml](./docker-compose.yml)
+* Use Docker:  see [docker-compose.yml](./docker-compose.yml)
 
 * Use WSL (Windows Subsystem for Linux) **strictly on version 2**. Under this option you can build Erigon just as you
   would on a regular Linux distribution. You can point your data also to any of the mounted Windows partitions (
@@ -568,7 +568,7 @@ make rpcdaemon
 Supported JSON-RPC calls ([eth](./cmd/rpcdaemon/commands/eth_api.go), [debug](./cmd/rpcdaemon/commands/debug_api.go)
 , [net](./cmd/rpcdaemon/commands/net_api.go), [web3](./cmd/rpcdaemon/commands/web3_api.go)):
 
-For a details on the implementation status of each
+For details on the implementation status of each
 command, [see this table](./cmd/rpcdaemon/README.md#rpc-implementation-status).
 
 ### Run all components by docker-compose
@@ -578,7 +578,7 @@ onto the host OS.
 
 #### Optional: Setup dedicated user
 
-User UID/GID need to be synchronized between the host OS and container so files are written with correct permission.
+User UID/GID needs to be synchronized between the host OS and container so files are written with correct permission.
 
 You may wish to setup a dedicated user/group on the host OS, in which case the following `make` targets are available.
 
