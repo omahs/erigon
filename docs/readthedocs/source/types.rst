@@ -76,7 +76,7 @@ price of each unit of gas.
 
 **txdata.GasLimit**
 
-Maximun amount of units of gas the transaction can use.
+Maximum amount of units of gas the transaction can use.
 
 **txdata.Recipient**
 
@@ -125,7 +125,7 @@ an alias for an array of Transaction. Instead of []Transaction, Transactions can
 
     type Transactions []*Transaction
 
-repressent an Ethereum Transaction.
+represent an Ethereum Transaction.
 
 Block Header
 ============
@@ -155,7 +155,7 @@ It represents a block Header.
 
 **ParentHash**
 
-Its the hash of the block that comes before the Header's block.
+It's the hash of the block that comes before the Header's block.
 
 **UncleHash**
 
